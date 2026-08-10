@@ -9,26 +9,49 @@
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
-
 <body>
     <script src="script.js"></script>
 <header>
     <h1>STUDENT HUB PORTAL</h1>
 </header>
 
-<form>
-<h2>Forgot Username</h2>
+<form action="home.html">
+<h2>Student Login</h2>
+<label>Id</label>
+<input type="text" placeholder="Enter Student ID ">
+<br><br>
+
+<label>Password</label>
+<input type="password" placeholder="Enter Password">
+<br><br>
+
+<label>Role</label>
+
+<select>
+    <option>Student</option>
+    <option>Faculty</option>
+    <option>Admin</option>
+</select>
+
+<br><br>
+
+<input type="submit" value="Login">
+
+<input type="reset" value="Clear form">
+
+<p>Forgot Password??</p>
 <br>
-<label>Registered Email</label>
-<input type="email" placeholder="Enter Registered Email">
+<a href="forgotpassword.html" class="login-btn">Forgot Password</a>
+<br><br>
 
-<label>Mobile Number</label>
-<input type="tel" placeholder="Enter Mobile Number">
+<p>Forgot Password??</p>
+<br>
+<a href="forgotusername.html" class="login-btn">Forgot Username</a>
+<br><br>
 
-<input type="submit" value="Find Username">
-
-<a href="login.html" class="back-btn">← Back to Login</a>
-
+<p>Don't have an account?</p>
+<br>
+<a href="Register.html" class="login-btn">Register Now</a>
 </form>
 
 <footer>
@@ -42,6 +65,5 @@
         © 2026 StudentHub Portal | All Rights Reserved.
     </p>
 </footer>
-
 </body>
 </html>
