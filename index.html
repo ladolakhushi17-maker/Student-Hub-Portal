@@ -8,44 +8,165 @@
 
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <style>
+        /* Dark Mode */
+
+        body {
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        body.dark-mode {
+            background-color: #121212;
+            color: white;
+        }
+
+        body.dark-mode header {
+            background-color: #1e1e1e;
+            color: white;
+        }
+
+        body.dark-mode section {
+            background-color: #1e1e1e;
+            color: white;
+        }
+
+        body.dark-mode .option-card {
+            background-color: #1e1e1e;
+            color: white;
+        }
+
+        body.dark-mode footer {
+            background-color: #1e1e1e;
+            color: white;
+        }
+
+        body.dark-mode a {
+            color: #80bfff;
+        }
+
+        /* Dark Mode Button */
+
+        .theme-button {
+            padding: 10px 18px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            background-color: #333;
+            color: white;
+            font-size: 14px;
+            margin: 10px;
+        }
+
+        .theme-button:hover {
+            opacity: 0.8;
+        }
+    </style>
 </head>
+
 <body>
-<script src="script.js"></script>
+
 <header>
+
+    <button id="themeButton" class="theme-button">
+        🌙 Dark Mode
+    </button>
+
     <h1>STUDENT HUB PORTAL</h1>
+
 </header>
 
 <section>
+
     <h2>Welcome</h2>
+
     <p>Welcome to the Student Hub Portal.</p>
+
 </section>
 
 <div class="user-options">
 
     <div class="option-card">
+
         <h3>New User?</h3>
+
         <p>Create your StudentHub account.</p>
-        <a href="register.html" class="small-btn">Register Now</a>
+
+        <a href="register.html" class="small-btn">
+            Register Now
+        </a>
+
     </div>
 
     <div class="option-card">
+
         <h3>Already Registered?</h3>
+
         <p>Access your student dashboard.</p>
-        <a href="login.html" class="small-btn">Login Now</a>
+
+        <a href="login.html" class="small-btn">
+            Login Now
+        </a>
+
     </div>
 
 </div>
 
 <footer>
+
     <div class="footer-container">
+
         <div class="footer-section">
+
             <h2>StudentHub Portal</h2>
-            <p>Your digital campus companion for academics, courses, assignments, attendance, and student services.</p>
+
+            <p>
+                Your digital campus companion for academics, courses,
+                assignments, attendance, and student services.
+            </p>
+
         </div>
+
     </div>
+
     <p class="copyright">
         © 2026 StudentHub Portal | All Rights Reserved.
     </p>
+
 </footer>
+
+
+<script>
+    const themeButton = document.getElementById("themeButton");
+
+    // Check previously selected theme
+    if (localStorage.getItem("theme") === "dark") {
+
+        document.body.classList.add("dark-mode");
+
+        themeButton.textContent = "☀️ Light Mode";
+    }
+
+    // Change Light/Dark Mode
+    themeButton.addEventListener("click", function () {
+
+        document.body.classList.toggle("dark-mode");
+
+        if (document.body.classList.contains("dark-mode")) {
+
+            localStorage.setItem("theme", "dark");
+
+            themeButton.textContent = "☀️ Light Mode";
+
+        } else {
+
+            localStorage.setItem("theme", "light");
+
+            themeButton.textContent = "🌙 Dark Mode";
+        }
+
+    });
+</script>
+
 </body>
 </html>

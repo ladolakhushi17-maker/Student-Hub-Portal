@@ -1,159 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Panel - StudentHub</title>
+    <title>Student Hub Portal</title>
+
+    <link rel="stylesheet" href="style.css">
+    
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
 <body>
 
-<!-- Skip to Content Link -->
-<a href="#main-content">Skip to Main Content</a>
-
-<!-- Header -->
 <header>
-    <h1>StudentHub</h1>
-    <p>Your Student Portal</p>
+    <button id="themeButton" class="theme-button">
+    🌙 Dark Mode
+</button>
+    <h1>STUDENT HUB PORTAL</h1>
 </header>
 
-<!-- Navigation -->
-<nav aria-label="Main Navigation">
-    <a href="index.html">Home</a> |
-    <a href="about.html">About</a> |
-    <a href="register.html">Register</a> |
-    <a href="login.html">Login</a> |
-    <a href="dashboard.html">Dashboard</a> |
-    <a href="events.html">Events</a> |
-    <a href="profile.html">Profile</a> |
-    <a href="contact.html">Contact</a> |
-    <a href="admin.html">Admin</a> |
-    <a href="faq.html">FAQ</a> |
-    <a href="feedback.html">Feedback</a>
+<nav>
+<div class="menu-btn" onclick="openMenu()">
+    <i class="fa-solid fa-bars"></i>
+</div>
+
+<div id="overlay" class="overlay" onclick="closeMenu()"></div>
+<div id="sidebar" class="sidebar">
+    <span class="close-btn" onclick="closeMenu()">&times;</span>
+    <a href="home.html"><i class="fa-solid fa-house"></i> Home</a>
+    <a href="attendance.html"><i class="fa-solid fa-calendar-check"></i> Attendance</a>
+    <a href="assignment.html"><i class="fa-solid fa-book-open"></i> Assignment</a>
+    <a href="courses.html"><i class="fa-solid fa-graduation-cap"></i> Courses</a>
+    <a href="timetable.html"><i class="fa-solid fa-calendar-days"></i> Timetable</a>
+    <a href="faculty.html"><i class="fa-solid fa-chalkboard-user"></i> Faculty</a>
+    <a href="notice.html"><i class="fa-solid fa-bullhorn"></i> Notice</a>
+    <a href="profile.html"><i class="fa-solid fa-user"></i> Profile</a>
+    <a href="contactus.html"><i class="fa-solid fa-envelope"></i> Contact</a>
+    <a href="admin.html"><i class="fa-solid fa-user-shield"></i> Admin</a>
+    <a href="index.html"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+</div>
 </nav>
 
-<!-- Breadcrumb -->
-<nav aria-label="Breadcrumb">
-    <p>Home > Admin</p>
-</nav>
+<main>
 
-<!-- Main Content -->
-<main id="main-content">
+<div class="card">
+<table border="1">
+<h2>Administrator Information</h2>
+<tr>
+<th>Name</th>
+<td>Admin</td>
+</tr>
 
-    <section>
+<tr>
+<th>Email</th>
+<td>admin@studenthub.com</td>
+</tr>
 
-       
+<tr>
+<th>Department</th>
+<td>AI-ML</td>
+</tr>
 
-        <b>
-            Welcome to the StudentHub Admin Panel. 
-        </b>
+<tr>
+<th>Role</th>
+<td>System Administrator</td>
+</tr>
 
-    </section>
+</table>
+</div>
 
-    <section>
+<div class="card">
+<table border="1">
+<h2>Quick Statistics</h2>
+<tr>
+<th>Total Students</th>
+<td>500</td>
+</tr>
 
-        <h2>Administrator Information</h2>
+<tr>
+<th>Total Faculty</th>
+<td>35</td>
+</tr>
 
-        <table border="1" cellpadding="8">
+<tr>
+<th>Total Courses</th>
+<td>28</td>
+</tr>
 
-            <tr>
-                <th>Field</th>
-                <th>Details</th>
-            </tr>
+<tr>
+<th>Assignments</th>
+<td>120</td>
+</tr>
 
-            <tr>
-                <td>Administrator</td>
-                <td>System Administrator</td>
-            </tr>
+<tr>
+<th>Pending Requests</th>
+<td>15</td>
+</tr>
 
-            <tr>
-                <td>Department</td>
-                <td>College Administration</td>
-            </tr>
-
-            <tr>
-                <td>Role</td>
-                <td>Portal Management</td>
-            </tr>
-
-        </table>
-
-    </section>
-
-    <section>
-
-        <h2>Admin Functions</h2>
-
-        <ul>
-            <li>Manage Student Accounts</li>
-            <li>Manage Faculty Accounts</li>
-            <li>Add or Remove Events</li>
-            <li>Publish Notices</li>
-            <li>View Student Feedback</li>
-            <li>Manage Student Profiles</li>
-            <li>Monitor Portal Activity</li>
-        </ul>
-
-    </section>
-
-    <section>
-
-        <h2>Portal Status</h2>
-
-        <table border="1" cellpadding="8">
-
-            <tr>
-                <th>Module</th>
-                <th>Status</th>
-            </tr>
-
-            <tr>
-                <td>Student Registration</td>
-                <td>Active</td>
-            </tr>
-
-            <tr>
-                <td>Login System</td>
-                <td>Active</td>
-            </tr>
-
-            <tr>
-                <td>Events</td>
-                <td>Updated</td>
-            </tr>
-
-            <tr>
-                <td>Feedback</td>
-                <td>Available</td>
-            </tr>
-
-        </table>
-
-    </section>
-
-    <aside>
-
-        <h2>Quick Actions</h2>
-
-        <ul>
-            <li>Add New Student</li>
-            <li>Update Notice Board</li>
-            <li>View Reports</li>
-            <li>Manage Events</li>
-        </ul>
-
-    </aside>
-
+</table>
+</div>
 </main>
-
-<!-- Footer -->
 <footer>
 
-    <p>&copy; 2026 StudentHub. All Rights Reserved.</p>
+    <div class="footer-container">
+
+        <div class="footer-section">
+            <h2>StudentHub Portal</h2>
+            <p>Your digital campus companion for academics, courses, assignments, attendance, and student services.</p>
+        </div>
+
+    </div>
+
+    <p class="copyright">
+        © 2026 StudentHub Portal | All Rights Reserved.
+    </p>
 
 </footer>
-
+<script src="script.js"></script>
 </body>
-
 </html>
