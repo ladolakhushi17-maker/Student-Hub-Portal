@@ -1703,3 +1703,34 @@ body.dark-mode a {
 .theme-button:hover {
     opacity: 0.8;
 }
+
+/* ==========================================
+   REGISTRATION FORM VALIDATION
+   ========================================== */
+
+.error-message {
+    display: block;
+    color: #d93025;
+    font-size: 13px;
+    margin-top: 5px;
+    font-weight: 500;
+}
+
+#successMessage {
+    color: #188038;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 0;
+}
+
+/* Input error state */
+input:invalid {
+    border-color: #ccc;
+}
+
+/* Focus effect */
+input:focus,
+select:focus {
+    outline: none;
+}
+
